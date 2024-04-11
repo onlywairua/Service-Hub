@@ -218,6 +218,13 @@
           background-color: #000; 
         }
 
+        @media (max-width: 576px) {
+          .form-group1 .form-check {
+             display: block;
+          }
+        }
+
+
         .footer {
           display: flex;
           margin-right: auto;
