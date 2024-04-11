@@ -113,6 +113,10 @@
           border-radius: 10px 100px 120px 100px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .images {
+          display: flex;
+          justify-content: space-between;
+        }
 
         .image1 {
           background-image: url('4143723.jpg');
@@ -124,6 +128,7 @@
           width: 200px;
           height: 200px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          margin-right: 15px;
         }
 
         .image2 {
@@ -136,11 +141,7 @@
           width: 200px;
           height: 200px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .images {
-          display: flex;
-          justify-content: space-between;
+          margin-left: 15px;
         }
 
         .right-card {
