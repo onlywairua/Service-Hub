@@ -4,54 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hospitality Job Platform</title>
-  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xxxx" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="serviceHub.css">  
 </head>
 <body>
-   
-    <div class="header-container container-fluid">
-      <div class="row">
-        <div class="col">
-          <div class="header">
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <div class="left-header">
-                <img src="Service Hub Logo .png" alt="Service Hub Logo">
-                <h1 class="mb-0">THE SERVICE <span style="color: #fc6a03;">HUB</span></h1>
-              </div>
-              <div class="center-header d-flex flex-wrap align-items-center">
-                <button class="center-buttons">HOME</button>
-                <button class="center-buttons">JOB SEEKERS</button>
-                <button class="center-buttons">EMPLOYERS</button>
-                <button class="center-buttons">ABOUT US</button> 
-                <button class="center-buttons">CONTACT US</button>
-                <button class="center-buttons">LOG IN</button>
-              </div>
-            </div>
+
+  <div class="header-container container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="header">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="left-header">
+            <img src="Service Hub Logo .png" alt="Service Hub Logo">
+            <h1 class="mb-0">THE SERVICE <span style="color: #fc6a03;">HUB</span></h1>
+          </div>
+          <div class="center-header d-flex flex-wrap align-items-center">
+            <!-- Original buttons for larger screens -->
+            <button class="center-buttons d-none d-lg-block">HOME</button>
+            <button class="center-buttons d-none d-lg-block">JOB SEEKERS</button>
+            <button class="center-buttons d-none d-lg-block">EMPLOYERS</button>
+            <button class="center-buttons d-none d-lg-block">ABOUT US</button>
+            <button class="center-buttons d-none d-lg-block">CONTACT US</button>
+            <button class="center-buttons d-none d-lg-block">LOG IN</button>
+            
+            <!-- Dropdown button for smaller screens -->
+         <div class="dropdown d-lg-none">
+          <button class="center-buttons dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+            <img src="menu-icon.png" alt="Menu" style="width: 30px; height: auto;">
+          </button>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+            <!-- Dropdown menu items -->
+            <button class="dropdown-item">HOME</button>
+            <button class="dropdown-item">JOB SEEKERS</button>
+            <button class="dropdown-item">EMPLOYERS</button>
+            <button class="dropdown-item">ABOUT US</button>
+            <button class="dropdown-item">CONTACT US</button>
+            <button class="dropdown-item">LOG IN</button>
+          </div>
+        </div>
           </div>
         </div>
       </div>
     </div>
-
-  <div class="main-container container-fluid">
+  </div>
+</div>
+  
+<div class="main-container container-fluid">
     
-    <div class="row">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <div class="left-card">
-          <h2>LETS US<br> CONNECT YOU WITH A<br>NEW CAREER PATH</h2>
+  <div class="row">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="left-card">
+        <h2>LETS US<br> CONNECT YOU WITH A<br>NEW CAREER PATH</h2>
           <p>Embark on a journey towards a rewarding future with our platform. At the service hub, we specialize in connecting individuals like you with exciting new career opportunities in the hospitality industry. Whether you're seeking a fresh start or aiming to advance your career, our dedicated team is here to guide you every step of the way. Let us be your bridge to a fulfilling career path, where your skills and aspirations meet endless possibilities. Join us today and take the first step towards realizing your professional dreams.</p> 
-          <div class="images">
-            <div class="image1">  </div>    
+        <div class="images">
+          <div class="image1">  </div>    
             <div class="image2">  </div>
-          </div>
         </div>
       </div>
+    </div>
       
-      <div class="col-lg-6">
-        <div class="right-card">
-          <div class="form-container">
-            <form>
-                <div class="form-header">
+    <div class="col-lg-6">
+      <div class="right-card">
+        <div class="form-container">
+          <form>
+            <div class="form-header">
                   <h2>Sign Up</h2>
                   <h2>My Account</h2>
                 </div>
@@ -104,6 +121,23 @@
   </footer>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+   var dropdownToggle = document.querySelector('.dropdown-toggle');
+  
+   var dropdownMenu = document.querySelector('.dropdown-menu');
+
+   dropdownToggle.addEventListener('click', function() {
+       dropdownMenu.classList.toggle('show');
+  });
+
+  window.addEventListener('click', function(event) {
+  if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+
+  </script> 
 </body>
 </html>
