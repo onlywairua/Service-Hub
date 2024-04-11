@@ -167,6 +167,7 @@
         .form-header {
           display: flex;
           justify-content: space-between;
+          margin-right: 20px;
         }
 
         .form-header h2 {
