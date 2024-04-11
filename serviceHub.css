@@ -26,7 +26,19 @@
             margin-right: auto;
             margin-left: auto;
         }
+        /* Media query for smaller screens */
+        @media (max-width: 576px) {
+          h1, h2 {
+            font-size: 20px; 
+          }
+        }
 
+        /* Media query for medium screens */
+        @media (min-width: 577px) and (max-width: 992px) {
+          h1, h2 {
+            font-size: 32px; 
+          }
+        }
 
         .left-header {
           display: flex;
@@ -83,27 +95,13 @@
         }
 
         @media (min-width: 992px) {
-  .dropdown-toggle {
+        .dropdown-toggle {
     display: none; /* Hide dropdown toggle button on larger screens */
   }
 }
         
 
-.dropdown-toggle {
-  background-color: transparent; /* Remove background color */
-  border: none; /* Remove border */
-  padding: 0; /* Remove padding */
-  cursor: pointer; /* Set cursor to pointer for better usability */
-  outline: none; /* Remove outline when button is focused */
-}
 
-.dropdown-toggle:focus {
-  box-shadow: none; /* Remove focus box-shadow */
-}
-
-.dropdown-toggle:hover {
-  background-color: transparent; /* Remove background color on hover */
-}
         .container {
           padding: 20px;
         }
