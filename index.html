@@ -31,7 +31,7 @@
             <!-- Dropdown button for smaller screens -->
          <div class="dropdown d-lg-none">
           <button class="center-buttons dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-            <img src="menu-icon.png" alt="Menu" style="width: 50px; height: auto;">
+            <img src="menu-icon.png" alt="Menu" style="width: 40px; height: auto;">
           </button>
           <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
             <!-- Dropdown menu items -->
@@ -124,19 +124,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-   var dropdownToggle = document.querySelector('.dropdown-toggle');
-  
-   var dropdownMenu = document.querySelector('.dropdown-menu');
-
-   dropdownToggle.addEventListener('click', function() {
-       dropdownMenu.classList.toggle('show');
-  });
-
-  window.addEventListener('click', function(event) {
-  if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-    dropdownMenu.classList.remove('show');
-  }
-});
+    
+      var dropdownToggle = document.querySelector('.dropdown-toggle');
+      
+      var dropdownMenu = document.querySelector('.dropdown-menu');
+      
+      
+      dropdownToggle.addEventListener('click', function() {
+        // Toggle the 'show' class on the dropdown menu
+        dropdownMenu.classList.toggle('show');
+      });
+      
+      
+      window.addEventListener('click', function(event) {
+        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
 
   </script> 
 </body>
