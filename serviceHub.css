@@ -82,6 +82,28 @@
           background-color: #fc6a03;
         }
 
+        @media (min-width: 992px) {
+  .dropdown-toggle {
+    display: none; /* Hide dropdown toggle button on larger screens */
+  }
+}
+        
+
+.dropdown-toggle {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Set cursor to pointer for better usability */
+  outline: none; /* Remove outline when button is focused */
+}
+
+.dropdown-toggle:focus {
+  box-shadow: none; /* Remove focus box-shadow */
+}
+
+.dropdown-toggle:hover {
+  background-color: transparent; /* Remove background color on hover */
+}
         .container {
           padding: 20px;
         }
