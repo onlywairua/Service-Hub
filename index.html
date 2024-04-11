@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospitality Job Platform</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #000;
+          color: #000;
+        }
+       
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #000;
+            margin-top: 10px;
+            color: #fff;
+            padding: 1px 0;
+            border-radius: 15px;
+            border: solid 2px #fc6a03;
+            text-align: center;
+            width: 100%;
+        }
+
+        .header-container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+
+        .left-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .left-header img {
+          width: 40px;
+          height: 40px;
+          transition: transform 0.3s;
+        }
+
+        .left-header img:hover {
+          transform: scale(1.5);
+        }
+
+        .center-header {
+          display: flex;
+          justify-content: space-between;
+          margin-right: 15px;
+        }
+
+        .main-container {
+          width: 90%;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+        .center-buttons {
+          background-color: transparent;
+          position: relative;
+          color: white;
+          padding: 0 7px;    
+          font-size: 12pt;
+          font-weight: bolder;
+          border-radius: 12px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .center-buttons::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0; 
+          width: 100%;
+          height: 2px;
+          background-color: transparent;
+          transition: background-color 0.3s;
+        }
+
+        .center-buttons:hover::after {
+          background-color: #fc6a03;
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        .left-card {
+          background-color: #fc6a03;
+          color: #fff;
+          padding: 20px;
+          border-radius: 10px 100px 120px 100px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image1 {
+          background-image: url('4143723.jpg');
+          background-size: contain;
+          background-color: #fc6a03;
+          color: #fff;
+          padding: 20px;
+          border-radius: 10px 100px 120px 100px;
+          width: 200px;
+          height: 200px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image2 {
+          background-image: url('8316292.jpg');
+          background-size: contain;
+          background-color: #fc6a03;
+          color: #fff;
+          padding: 20px;
+          border-radius: 64px 96px 128px 32px;
+          width: 200px;
+          height: 200px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .images {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .right-card {
+          background-color: #fc6a03;
+          color: #fff;
+          padding: 20px;
+          border-radius: 64px 96px 128px 32px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+          background-color: rgba(255, 255, 255, 0.2); 
+          padding: 20px;
+          border-radius: 64px 96px 128px 32px;
+          margin-top: 20px;
+        }
+
+        .form-header {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .form-header h2 {
+          position: relative;
+          cursor: pointer;
+        }
+
+        .form-header h2::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          height: 3.5px;
+          background-color: transparent;
+          transition: background-color 0.3s;
+        }
+
+        .form-header h2:hover::after {
+          background-color: #000;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-group label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+          width: 90%;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+
+        .form-footer-button {
+          display: flex;
+          justify-content: center;
+        }
+
+        .form-footer:hover {
+          color: #fc6a03; 
+          background-color: #fff;
+        }
+
+        .form-footer {
+          margin-top: 10px;
+          padding: 10px 20px;
+          border: none;
+          background-color: #000;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: color 0.5s;
+        }
+
+        input[type="radio"] {
+          appearance: none; 
+          -webkit-appearance: none; 
+          width: 15px;
+          height: 15px;
+          margin-top: 10px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          outline: none; 
+          cursor: pointer;
+        }
+
+        input[type="radio"]:checked {
+          background-color: #000; 
+        }
+
+        .footer {
+          display: flex;
+          margin-right: auto;
+          margin-left: auto;
+          border-radius: 15px;
+          background-color: #fc6a03;
+          border:solid 2px #fc6a03;
+          color: #333;
+          padding: 10px 0;
+          text-align: center;
+          align-items: center;
+
+        }
+
+        .footer p {
+          margin: 0;
+          color: #000;
+        }
+        .img-container{
+          margin-right: 20px;
+        }
+        .img-container img {
+          width: 30px;
+          height: auto;
+          transition: transform 0.3s;
+        }
+          
+        
+
+        .img-container img:hover {
+          transform: scale(1.5);
+        }
+
+
+  </style>
+</head>
+<body>
+   
+    <div class="header-container container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="header">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="left-header">
+                <img src="Service Hub Logo .png" alt="Service Hub Logo">
+                <h1 class="mb-0">THE SERVICE <span style="color: #fc6a03;">HUB</span></h1>
+              </div>
+              <div class="center-header d-flex flex-wrap align-items-center">
+                <button class="center-buttons">HOME</button>
+                <button class="center-buttons">JOB SEEKERS</button>
+                <button class="center-buttons">EMPLOYERS</button>
+                <button class="center-buttons">ABOUT US</button> 
+                <button class="center-buttons">CONTACT US</button>
+                <button class="center-buttons">LOG IN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="main-container container-fluid">
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="left-card">
+          <h2>LETS US<br> CONNECT YOU WITH A<br>NEW CAREER PATH</h2>
+          <p>Embark on a journey towards a rewarding future with our platform. At the service hub, we specialize in connecting individuals like you with exciting new career opportunities in the hospitality industry. Whether you're seeking a fresh start or aiming to advance your career, our dedicated team is here to guide you every step of the way. Let us be your bridge to a fulfilling career path, where your skills and aspirations meet endless possibilities. Join us today and take the first step towards realizing your professional dreams.</p> 
+          <div class="images">
+            <div class="image1">  </div>    
+            <div class="image2">  </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="right-card">
+          <div class="form-container">
+            <form>
+              <div class="form-header">
+                <h2>Sign Up</h2>
+                <h2>My Account</h2>
+              </div>
+              
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group1">
+                <label>Choose Account Type:</label><br>
+                <input type="radio" id="jobSeeker" name="accountType" value="jobSeeker" checked>
+                <label for="jobSeeker">Job Seeker</label>
+                <input type="radio" id="employer" name="accountType" value="employer" style="margin-left: 265px;">
+                <label for="employer">Employer</label>
+              </div>
+              <div class="form-footer-button" >
+                <button type="submit" class="form-footer">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; THE SERVICE HUB 2024</span></p>
+    </div>
+    <div class="img-container">
+      <img src="email.svg" alt="Email">
+      <img src="instagram.svg" alt="Instagram">
+      <img src="linkedin.svg" alt="Linkedin">
+      <img src="twitter.svg" alt="X">
+    </div>
+      
+  </footer>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
